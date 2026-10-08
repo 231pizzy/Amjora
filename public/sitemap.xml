@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.amjora.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.amjora.com/about</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.amjora.com/solutions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.amjora.com/products</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.amjora.com/products/platform</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/products/payments</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/products/ai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/products/cloud</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/products/health</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/products/labs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/engineering</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.amjora.com/insights</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.amjora.com/insights/engineering-as-an-act-of-service</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.amjora.com/insights/building-trust-into-financial-infrastructure</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.amjora.com/insights/what-it-means-to-be-a-finder</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.amjora.com/insights/why-we-simplify-complexity</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.amjora.com/insights/designing-for-a-twenty-year-horizon</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.amjora.com/careers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.amjora.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.amjora.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

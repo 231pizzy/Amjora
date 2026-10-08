@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — Amjora Master Brand Blueprint */
+  --color-midnight: #0a0545;
+  --color-midnight-deep: #050226;
+  --color-cyan: #2dd4ff;
+  /* Darker than the brand accent on purpose — used as text/icon color on
+     light backgrounds, where #2dd4ff falls below WCAG AA contrast (2.8:1).
+     #0e7490 reaches 5.36:1 against white. Use --color-cyan for dark
+     backgrounds and non-text accents instead. */
+  --color-cyan-dim: #0e7490;
+  --color-amber: #f5b700;
+  --color-ink: #0a0a12;
+  --color-mist: #f6f7fb;
+  --color-line: #e6e8f0;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-midnight);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-cyan);
+    color: var(--color-midnight);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    max-width: 84rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 3rem;
+    }
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(90deg, var(--color-cyan), #7de8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(10, 5, 69, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 5, 69, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-mesh {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Tiled film-grain texture (real per-pixel noise, not an SVG filter —
+     resvg's feTurbulence support proved unreliable). Sits above the mesh
+     gradient and below content to keep large flat glows from looking
+     digitally flat. */
+  .bg-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/grain.webp');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
